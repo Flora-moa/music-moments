@@ -1,8 +1,11 @@
 // ---------- 三首正式 Demo 歌曲 ----------
+// 资源前缀：开发环境为 '/'，生产构建为 '/music-moments/'（与 vite.config.js 的 base 一致）
+const asset = (p) => import.meta.env.BASE_URL + p
+
 export const SONGS = [
-  { id: 'sunny',    name: '晴天',           artist: '周杰伦', cover: '/covers/sunny.jpg',    duration: 269 }, // 4:29
-  { id: 'meeting',  name: '如果我们不曾相遇', artist: '五月天', cover: '/covers/meeting.jpg',  duration: 202 }, // 3:22
-  { id: 'longtime', name: '陪你度过漫长岁月', artist: '陈奕迅', cover: '/covers/longtime.jpg', duration: 242 }, // 4:02
+  { id: 'sunny',    name: '晴天',           artist: '周杰伦', cover: asset('covers/sunny.jpg'),    duration: 269 }, // 4:29
+  { id: 'meeting',  name: '如果我们不曾相遇', artist: '五月天', cover: asset('covers/meeting.jpg'),  duration: 202 }, // 3:22
+  { id: 'longtime', name: '陪你度过漫长岁月', artist: '陈奕迅', cover: asset('covers/longtime.jpg'), duration: 242 }, // 4:02
 ]
 
 export const EMOJIS = ['❤️', '🌙', '☀️', '🥹', '🎧', '✨']
